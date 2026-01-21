@@ -1,0 +1,39 @@
+# User configuration (contains personal IPs)
+config.json
+
+# Claude Code settings
+.claude/
+
+# Backup files
+*.backup
+*.backup_*
+*.bak
+Backups/
+
+# Log files
+*.log
+*.csv
+Moonlight-StreamLogs/
+
+# Windows system files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+
+# PowerShell artifacts
+*.ps1xml
+
+# Temporary files
+*.tmp
+*.temp
+~$*
