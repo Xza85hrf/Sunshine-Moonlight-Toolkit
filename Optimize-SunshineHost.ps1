@@ -19,7 +19,7 @@
 # Check if running as admin
 $isAdmin = ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
 
-Clear-Host
+try { Clear-Host } catch { }
 Write-Host ""
 Write-Host "  =============================================================" -ForegroundColor Magenta
 Write-Host "       SUNSHINE HOST OPTIMIZER                                  " -ForegroundColor Magenta

@@ -18,7 +18,7 @@
     powershell -ExecutionPolicy Bypass -File ".\Fix-Tailscale.ps1"
 #>
 
-Clear-Host
+try { Clear-Host } catch { }
 Write-Host ""
 Write-Host "  =============================================================" -ForegroundColor Cyan
 Write-Host "       TAILSCALE 'STARTING...' FIX                              " -ForegroundColor Cyan

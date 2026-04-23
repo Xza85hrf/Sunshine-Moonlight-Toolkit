@@ -93,7 +93,7 @@ $Profiles = @{
 }
 
 function Show-Banner {
-    Clear-Host
+    try { Clear-Host } catch { }
     Write-Host ""
     Write-Host "  =============================================================" -ForegroundColor Cyan
     Write-Host "       MOONLIGHT QUICK SETUP - LAN OPTIMIZED                    " -ForegroundColor Cyan

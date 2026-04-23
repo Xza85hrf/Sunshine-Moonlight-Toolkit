@@ -27,7 +27,7 @@ if (Test-Path $ConfigPath) {
     try { $config = Get-Content $ConfigPath -Raw | ConvertFrom-Json } catch { $config = $null }
 }
 
-Clear-Host
+try { Clear-Host } catch { }
 Write-Host ""
 Write-Host "  =============================================================" -ForegroundColor Cyan
 Write-Host "       SUNSHINE CONNECTION TESTER                               " -ForegroundColor Cyan

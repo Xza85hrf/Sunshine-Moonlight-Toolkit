@@ -423,7 +423,7 @@ function Get-RecommendedProfile {
 # ============================================================================
 
 function Show-MonitorHeader {
-    Clear-Host
+    try { Clear-Host } catch { }
     Write-Host ""
     Write-Host "  =============================================================" -ForegroundColor Magenta
     Write-Host "    SUNSHINE + MOONLIGHT REAL-TIME STREAM MONITOR              " -ForegroundColor Magenta
@@ -568,7 +568,7 @@ function Write-LogEntry {
 # ============================================================================
 
 # Banner
-Clear-Host
+try { Clear-Host } catch { }
 Write-Host ""
 Write-Host "  =============================================================" -ForegroundColor Magenta
 Write-Host "    SUNSHINE + MOONLIGHT STREAM OPTIMIZER                       " -ForegroundColor Magenta
@@ -757,7 +757,7 @@ Write-Host "====================================================================
 Write-Host "              OPTIMIZED SETTINGS FOR YOUR CONNECTION                " -ForegroundColor Green
 Write-Host "====================================================================" -ForegroundColor Green
 Write-Host ""
-Write-Host "  Based on your ~110ms latency to $HostTailscaleIP:" -ForegroundColor White
+Write-Host "  Based on your ~110ms latency to ${HostTailscaleIP}:" -ForegroundColor White
 Write-Host ""
 Write-Host "  RECOMMENDED MOONLIGHT SETTINGS:" -ForegroundColor Yellow
 Write-Host "    Resolution     : 1920x1080 (1080p)" -ForegroundColor Cyan

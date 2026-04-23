@@ -21,7 +21,7 @@ $ConfigPath = Join-Path $PSScriptRoot "config.json"
 # ============================================================================
 
 function Write-Banner {
-    Clear-Host
+    try { Clear-Host } catch { }
     Write-Host ""
     Write-Host "  =============================================================" -ForegroundColor Cyan
     Write-Host "       SUNSHINE-MOONLIGHT-TOOLKIT SETUP WIZARD                  " -ForegroundColor Cyan

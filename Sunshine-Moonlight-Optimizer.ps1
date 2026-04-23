@@ -88,7 +88,7 @@ $script:TestResults = @{
 # BANNER
 # ============================================================================
 
-Clear-Host
+try { Clear-Host } catch { }
 Write-Host ""
 Write-Host "  =============================================================" -ForegroundColor Magenta
 Write-Host "    SUNSHINE + MOONLIGHT CONNECTION OPTIMIZER                   " -ForegroundColor Magenta
