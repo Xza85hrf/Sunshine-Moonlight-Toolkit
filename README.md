@@ -52,10 +52,17 @@ Double-click `Toolkit-Launcher.bat` to access all tools:
 [1] Apply Moonlight Settings
 [2] Test Connection
 [3] Stream Monitor
-[4] Full Diagnostics
+[4] Full Diagnostics                (will prompt for host Tailscale IP)
 [5] Optimize Sunshine Host (Admin)
 [6] Fix Tailscale Stuck (Admin)
 ```
+
+> **Note:** Option `[4] Full Diagnostics` invokes
+> `Sunshine-Moonlight-Optimizer.ps1`, which declares `-HostTailscaleIP`
+> as a mandatory parameter. When launched from the menu without that
+> flag, PowerShell prompts for it interactively before the script
+> continues. To skip the prompt, call the script directly:
+> `powershell -ExecutionPolicy Bypass -File Sunshine-Moonlight-Optimizer.ps1 -HostTailscaleIP 100.x.x.x`.
 
 ## Scripts Included
 
