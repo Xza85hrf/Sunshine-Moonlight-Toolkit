@@ -26,11 +26,12 @@ echo    [3] Stream Monitor (run on LAPTOP)
 echo    [4] Full Diagnostics (run on LAPTOP)
 echo.
 echo    [5] Optimize Sunshine Host (run on DESKTOP - needs Admin)
-echo    [6] Fix Tailscale Stuck (needs Admin)
+echo    [6] Setup File Sharing (run on DESKTOP - needs Admin)
+echo    [7] Fix Tailscale Stuck (needs Admin)
 echo.
-echo    [7] Exit
+echo    [8] Exit
 echo.
-set /p choice="  Enter choice (0-7): "
+set /p choice="  Enter choice (0-8): "
 
 if "%choice%"=="0" (
     powershell -ExecutionPolicy Bypass -File "%~dp0Setup-Toolkit.ps1"
@@ -65,10 +66,18 @@ if "%choice%"=="6" (
     echo  This requires Administrator privileges!
     echo  Right-click this script and "Run as Administrator"
     echo.
-    powershell -ExecutionPolicy Bypass -File "%~dp0Fix-Tailscale.ps1"
+    powershell -ExecutionPolicy Bypass -File "%~dp0Setup-FileSharing.ps1"
     goto menu
 )
 if "%choice%"=="7" (
+    echo.
+    echo  This requires Administrator privileges!
+    echo  Right-click this script and "Run as Administrator"
+    echo.
+    powershell -ExecutionPolicy Bypass -File "%~dp0Fix-Tailscale.ps1"
+    goto menu
+)
+if "%choice%"=="8" (
     exit
 )
 
